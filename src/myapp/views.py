@@ -9,3 +9,12 @@ def index1(request):
         return HttpResponse('len is {}'.format(len(name)))
     return HttpResponse('It is GET request')
 
+
+def index2(request):
+    age = request.POST.get('age')
+    if int(age) < 18:
+        return HttpResponse('В доступе отказано')
+    else:
+        return HttpResponse('Добро пожаловать')
+
+
