@@ -17,11 +17,16 @@ from django.contrib import admin
 from django.urls import path
 from myapp.views import index1
 from myapp.views import index2
+from myapp2.views import cw18_1
+from myapp2.views import cw18_2
+
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index1/', index1),
     path('index2/', index2),
-
+    path('cw18_1/', cw18_1),
+    path('cw18_2/', cw18_2),
 ]

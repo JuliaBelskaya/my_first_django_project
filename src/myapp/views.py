@@ -16,5 +16,3 @@ def index2(request):
         return HttpResponse('В доступе отказано')
     else:
         return HttpResponse('Добро пожаловать')
-
-
