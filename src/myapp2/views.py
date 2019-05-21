@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import loader
 # Create your views here. (бизнес логика)
 
 
@@ -29,3 +30,12 @@ def cw18_2(request):
         return HttpResponse(result)
     return HttpResponse('It is GET request')
 
+
+def render_name(request):
+    if request.method == 'GET':
+        template = loader.get_template('cw18_tsk3.html')
+        return HttpResponse(template.render({}, request))
+    if request.method == 'POST':
+        name = request.method.POST.get('name')
+        template = loader.get_template('cw18_tsk3.1.html')
+        return HttpResponse(template.render({'name': name}, request))
