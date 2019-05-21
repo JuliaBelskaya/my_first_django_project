@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<form action="http://127.0.0.1:8000/cw19/add/" method="POST">
+<form action="{% url 'comment_add' %}" method="POST">
 
     <p>
         Firstname
