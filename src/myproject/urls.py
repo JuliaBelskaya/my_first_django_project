@@ -25,4 +25,5 @@ urlpatterns = [
     path('myapp2/', include('myapp2.urls')),
     path('render_name/', render_name),
     path('cw19/', include('cw19.urls')),
+    path('cw20/', include('cw20.urls')),
 ]
